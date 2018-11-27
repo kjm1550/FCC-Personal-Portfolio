@@ -1,0 +1,160 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+#header {
+	background-color: rgb(210, 20, 20);
+	padding: 10px 20px 0px 20px;
+	border-bottom: 3px solid #222222;
+	position: fixed;
+	top: 0px;
+	width: 100%;
+}
+#header h1 {
+	display: inline-block;
+	font-size: 3em;
+}
+#nav-bar {
+	float: right;
+	margin-right: 40px;
+	background-color: #eeeeee;
+}
+#nav-bar li {
+	
+	width: 120px;
+	padding: auto;
+	list-style-type: none;
+}
+.nav-link {
+	text-decoration: none;
+	list-style: none;
+	color: black;
+	display: block;
+	padding: 6px 10px;
+	border: 2px solid #222222;
+}
+.no-bottom {
+	border-bottom: none;
+}
+.nav-link:hover {
+	background-color: darkred;
+}
+
+#front-page img {
+	width: 100%;
+	border-bottom: 2px solid #222222;
+	margin-top: 120px;
+	display: flex;
+}
+#front-page ul {
+	display: flex;
+	background-color:  rgb(210, 20, 20);
+	justify-content: space-around;
+	width: 100%;
+}
+#front-page li {
+	list-style-type: none;
+	font-size: 2em;
+	padding: 36px 0;
+}
+
+
+#tickets {
+	display: flex;
+	justify-content: space-around;
+	padding: 185px 0;
+}
+.tic-item {
+	list-style-type: none;
+	width: 20%;
+	border: 3px solid #222222;
+	text-align: center;
+}
+.tic-item h3 {
+	background-color: rgb(210, 20, 20);
+	border-bottom: 3px solid #222222;
+	padding: 28px;
+	font-size: 2.3em
+}
+.tic-item p {
+	padding: 26px;
+	font-size: 1.3em;
+}
+.button {
+	font-size: 1.3em;
+	padding: 8px 14px;
+	margin-bottom: 20px;
+}
+
+
+#stadium {
+	background-color: rgb(210, 20, 20);
+	border-top: 2px solid #222222;
+	border-bottom: 2px solid #222222;
+	width: 100%;
+}
+#stadium p, #stadium a {
+	font-size: 32px;
+	text-decoration: none;
+	color: black;
+	text-align: center;
+	margin-top: 44px;
+}
+#stadium #video {
+	width: 50%;
+	margin: 36px 25%;
+	border: 2px solid black;
+	box-sizing: border-box;
+}
+
+#email-club {
+	width: 50%;
+	margin: 74px auto;
+	padding: 56px 36px;
+	background-color: rgb(210, 20, 20);
+	border: 2px solid #222222;
+	border-radius: 15px;
+	font-size: 2em;
+}
+#email-club p {
+	text-align: center;
+	line-height: 1.6em;
+}
+#email {
+	height: 3em;
+	padding: 4px 4px 4px 8px;
+	width: 100%;
+	box-sizing: border-box;
+	font-size: .5em;
+	border: 1px solid #222222;
+	border-radius: 6px;
+}
+#submit {
+	width: 35%;
+	max-width: 200px;
+	height: 35px;
+	font-size: .6em;
+	border: 1px solid #222222;
+	border-radius: 6px;
+	margin: 44px auto 0 auto;
+	display: block;
+}
+
+footer {
+	background-color: #777777;
+	height: 75px;
+	display: flex;
+}
+footer p{
+	text-align: right;
+	font-size: 1.1em;
+	padding: 28px 40px;
+}
+
+@media only screen and (max-width: 1200px) {
+	#stadium #video {
+		height: 400px;
+	}
+}
