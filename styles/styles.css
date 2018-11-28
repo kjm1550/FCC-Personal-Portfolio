@@ -3,11 +3,16 @@
   margin: 0;
 }
 
+:root {
+	--light-green: #28965A;
+	--dark-green: #2A6041;
+}
+
 /* this is for the nav bar */
 #navbar {
   overflow: hidden;
   width: 100%;
-  background-color: #28965A;
+  background-color: var(--light-green);
   position: fixed;
   top: 0px;
   padding-left: 60px;
@@ -21,7 +26,7 @@
   float: left;
 }
 #navbar a:hover {
-  background-color: #2A6041;
+  background-color: var(--dark-green);
 }
 @media only screen and (max-width: 600px) {
   #navbar {
@@ -51,7 +56,7 @@
 /* this is for the project area */
 
 #projects {
-  border-top: 14px solid #28965A;
+  border-top: 14px solid var(--light-green);
 }
 #projects h4 {
   font-size: 4vw;
@@ -65,11 +70,11 @@
 }
 #projects a {
   font-size: 2.5vw;
-  color: #28965A;
+  color: var(--light-green);
   text-decoration: none;
 }
-#project a:hover {
-  color: #2A6041;
+#projects a:hover {
+  color: var(--dark-green);
 }
         /* for the flexbox in the project area */
 
@@ -84,14 +89,14 @@
   background-color: #EDEBA0;
   padding: 16px 12px;
   margin: 6px 14px;
-  border: 2px solid #2A6041;
+  border: 2px solid var(--dark-green);
   border-radius: 10px;
 }
 
 /* this is for the footer */
 
 footer {
-  background-color: #28965A;
+  background-color: var(--light-green);
   color: white;
   padding: 24px 60px;
   margin-top: 64px;
