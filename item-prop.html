@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Flexbox Item Properties</title>
+    <link href="styles/styles-tech-doc.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>Flexbox</header>
+      <h3>Item Properties</h3>
+      <h3><a href="container-prop.html" id="switch-prop">Container Properties</a></h3>
+      <a href="#order" class="nav-link" >Order</a>
+      <a href="#flex-grow" class="nav-link">Flex-grow</a>
+      <a href="#flex-shrink" class="nav-link">Flex-shrink</a>
+      <a href="#flex-basis" class="nav-link">Flex-basis</a>
+      <a href="#flex" class="nav-link">Flex</a>
+      <a href="#align-self" class="nav-link">Align-self</a>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="order">
+        <header>Order</header>
+        <p>This property is used to control the order of an item in the flex container. The order id based off numerical order.</p>
+        <code>.item {<br/>
+        order: 1; /* any integer */<br/>
+        }</code>
+        <dv class="container">
+          <div class="child">
+            <p>-1</p>
+          </div>
+          <div class="child">
+            <p>0 (default)</p>
+          </div>
+          <div class="child">
+            <p>2</p>
+          </div>
+        </dv>
+        <p>The numbers on the boxes are the given order.</p>
+      </section>
+      <section class="main-section" id="flex-grow">
+        <header>Flex-grow</header>
+        <p>This property estamblishes the ability for a item to grow if needed. A unitless number serves as a proportion of the spacing of the item. It represents the horizontal space being taken up by the items to cover the given space.</p>
+        <code>.container {<br/>
+        flex-grow: 2; /* number */<br/>
+        }</code>
+        <dv class="container">
+          <div class="child flex-grow1">
+            <p>1</p>
+          </div>
+          <div class="child flex-grow1">
+            <p>1</p>
+          </div>
+          <div class="child flex-grow1">
+            <p>1</p>
+          </div>
+          <div class="child flex-grow2">
+            <p>2</p>
+          </div>
+        </dv>
+        <dv class="container container-column">
+          <div class="child flex-grow1">
+            <p>Hello</p>
+          </div>
+          <div class="child flex-grow2">
+            <p>World</p>
+          </div>
+        </dv>
+        <ul>
+          <li>All 1s will space all items evenly distributed.</li>
+        </ul>
+      </section>
+      <section class="main-section" id="flex-shrink">
+        <header>Flex-shrink</header>
+        <p>The ability for a item to shrink if necessary. The oposite and used with flex-grow.</p>
+        <code>.container{<br/>
+        flex-shrink: 3; /* number */<br/>
+        }</code>
+        <ul>
+          <li>All 1s will space all items evenly distributed.</li>
+        </ul>
+      </section>
+      <section class="main-section" id="flex-basis">
+        <header>Flex-basis</header>
+        <p>Defines the default size of an element before the remaining space is distributed.</p>
+        <code>.container{<br/>
+        flex-basis: 75px /* length */<br/>
+        }</code>
+        <dv class="container">
+          <div class="child flex-basis">
+            <p>Hello</p>
+          </div>
+          <div class="child flex-basis">
+            <p>Flex</p>
+          </div>
+          <div class="child flex-basis">
+            <p>Basis</p>
+          </div>
+        </dv>
+        <ul>
+          <li>Auto: <e>Default</e>. Extra space is distributed based on its flex-grow value</li>
+        </ul>
+      </section>
+      <section class="main-section" id="flex">
+        <header>Flex</header>
+        <p>This property can be used to represent flex-grow, flex-shrink, and flex-basis.</p>
+        <code>.container {<br/>
+        flex: 2 1 auto/* flex-grow flex-shrink flex-basis */<br/>
+        }</code>
+        <dv class="container">
+          <div class="child flex">
+            <p>Hello</p>
+          </div>
+          <div class="child flex">
+            <p>Flex</p>
+          </div>
+          <div class="child flex">
+            <p>World</p>
+          </div>
+        </dv>
+        <ul>
+          <li><em>Default</em>: 0 1 auto;</li>
+          <li>flex-shrink and flex-basis are optional.</li>
+        </ul>
+      </section>
+      <section class="main-section" id="align-self">
+        <header>Align-self</header>
+        <p>This property is like align-items, but this is for just a selected item.</p>
+        <code>.container {<br/>
+        align-self: /* flex-start, flex-end, center, stretch, or baceline */<br/>
+        }</code>
+        <dv class="container flex-start">
+          <div class="child">
+            <p>Hello</p>
+          </div>
+          <div class="child align-self-flex-end">
+            <p>Flex-end</p>
+          </div>
+          <div class="child">
+            <p>World</p>
+          </div>
+          <div class="child align-self-center">
+            <p>Center</p>
+          </div>
+          </div>
+        </dv>
+        <ul>
+          <li>Flex-start: Item is placed near the cross start.</li>
+          <li>Flex-end: Item is placed near the cross end.</li>
+          <li>Center: Evenly centers the item between the cross start and end.</li>
+          <li>Stretch: Streches the whole item to cover from the cross start to the end.</li>
+          <li>Baseline: aligns the item based off the the baseline of the first item.</li>
+          <li>float, clear and vertical-align do not have an effect on a flex item.</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,166 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+/* keeps the nav bar to the side and main doc to display normaly. */
+#navbar {
+  position: fixed;
+  width: 200px;
+}
+#main-doc {
+  position: absolute;
+  margin-left: 200px;
+}
+
+
+/* for the navbar */
+#navbar {
+  height: 100%;
+  border-right: 2px solid black;
+}
+#navbar header{
+  font-size: 36px;
+  margin: 20px;
+  text-align: center;
+}
+#navbar h3 {
+  font-size: 20px;
+}
+#navbar h3 a {
+  text-decoration: none;
+  color: #555555;
+}
+#navbar h3 a:hover {
+  color: #6BF178;
+}
+.nav-link {
+  color: #35A7FF;
+  display: block;
+  font-size: 18px;
+  text-decoration: none;
+}
+#navbar h3, .nav-link {
+  border-bottom: 1px solid black;
+  padding: 10px 0 10px 20px;
+}
+.nav-link:hover {
+  color: #6BF178;
+}
+
+
+/* for the main doc */
+#main-doc header{
+  font-size: 52px;
+  font-weight: bold;
+  margin: 35px 0 25px 25px;
+}
+.main-section {
+  width: 80%;
+  margin: auto;
+}
+.main-section p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  line-height: 1.75em;
+  color: #222222;
+}
+.main-section ul {
+  margin-bottom: 20px;
+}
+.main-section li {
+  font-size: 16px;
+  margin-left: 50px;
+  line-height: 1.3em;
+  color: #222222;
+}
+code {
+  background-color: #dddddd;
+  display: block;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  font-size: 16px;
+}
+.main-section p, .main-section li {
+  font-family: 'Lato', sans-serif;
+}
+.main-section img {
+  width: 100%;
+}
+
+
+/* this is for the flebox examples */
+.container {
+display: flex;
+background-color: #6BF178;
+height: 100px;
+width: 65%;
+margin: 0 auto 20px auto;
+}
+.container-column {
+  flex-direction: column;
+  height: 300px;
+  width: 25%;
+}
+.nonwrap {
+  width: 300px;
+}
+.wrap {
+  flex-wrap: wrap;
+  height: 150px;
+  width: 300px;
+}
+.child{
+  background-color: #35A7FF;
+  margin: 5px;
+}
+.center {
+  justify-content: center;
+}
+.space-between {
+  justify-content: space-between;
+}
+.flex-end {
+  align-content: flex-end;
+}
+.space-around {
+  align-content: space-around;
+}
+.flex-start {
+  align-items: flex-start;
+}
+.flex-end-align-items {
+  align-items: flex-end;
+}
+.flex-grow1 {
+  flex-grow: 1;
+}
+.flex-grow2 {
+  flex-grow: 2;
+}
+.flex-shrink1 {
+  flex-shrink: 1;
+}
+.flex-shrink2 {
+  flex-shrink: 2;
+}
+.flex-basis {
+  flex-basis: 75px;
+}
+.flex {
+  flex: 2 1 auto;
+}
+.align-self-flex-end {
+  align-self: flex-end;
+}
+.align-self-center {
+  align-self: center;
+}
+
+@media only screen and (max-width: 700px) {
+  .main-section {
+    width: 95%;
+    margin: auto;
+}
+}
