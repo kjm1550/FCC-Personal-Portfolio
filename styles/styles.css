@@ -64,9 +64,10 @@
   margin-top: 84px;
 }
 #projects h5 {
-  font-size: 24px;
+  font-size: 22px;
   text-align: center;
   margin: 42px;
+  font-family: Arial, Helvetica;
 }
 #projects a {
   font-size: 22px;
