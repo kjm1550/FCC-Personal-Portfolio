@@ -4,15 +4,15 @@
 }
 
 :root {
-	--light-green: #28965A;
-	--dark-green: #2A6041;
+  --light-blue: #004e92;
+	--dark-blue: #000428;
 }
 
 /* this is for the nav bar */
 #navbar {
   overflow: hidden;
   width: 100%;
-  background-color: var(--light-green);
+  background-color: var(--light-blue);
   position: fixed;
   top: 0px;
   padding-left: 60px;
@@ -26,7 +26,7 @@
   float: left;
 }
 #navbar a:hover {
-  background-color: var(--dark-green);
+  background-color: var(--dark-blue);
 }
 @media only screen and (max-width: 600px) {
   #navbar {
@@ -56,7 +56,7 @@
 /* this is for the project area */
 
 #projects {
-  border-top: 14px solid var(--light-green);
+  border-top: 14px solid var(--light-blue);
 }
 #projects h4 {
   font-size: 36px;
@@ -71,11 +71,11 @@
 }
 #projects a {
   font-size: 22px;
-  color: var(--light-green);
+  color: var(--light-blue);
   text-decoration: none;
 }
 #projects a:hover {
-  color: var(--dark-green);
+  color: white;
 }
         /* for the flexbox in the project area */
 
@@ -87,17 +87,17 @@
   margin: auto;
 }
 .child {
-  background-color: #EDEBA0;
+  background-color: #dff0ff;
   /*padding: 16px 12px;*/
   margin: 8px 14px;
-  border: 2px solid var(--dark-green);
+  border: 2px solid var(--dark-blue);
   border-radius: 10px;
   width: 300px;
   height: 60px;
   text-align: center;
 }
 .child:hover {
-  background-color: #FEFDCD;
+  background-color: var(--dark-blue);
 }
 .child a {
   display: inline-block;
@@ -109,7 +109,7 @@
 /* this is for the footer */
 
 footer {
-  background-color: var(--light-green);
+  background-color: var(--light-blue);
   color: white;
   padding: 24px 60px;
   margin-top: 64px;
