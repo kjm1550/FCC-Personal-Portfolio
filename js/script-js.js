@@ -20,8 +20,8 @@ $(document).ready(() => {
 	const romanNums = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I'];
 
 	$("#rnc_submit").click(function() {
-		var num = document.getElementById("rnc_input").value;
-		var romanized = '';
+		let num = document.getElementById("rnc_input").value;
+		let romanized = '';
 		for (x = 0; x < realNums.length; x++) {
 			while (realNums[x] <= num) {
 				if (num >= realNums[x]) {
@@ -31,6 +31,29 @@ $(document).ready(() => {
 			}
 		}
 		document.getElementById("rnc_output").innerHTML = romanized;
+	});
+
+	const abc = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+	const regex_cc = /[A-Z]/ ;
+
+	$("#cc_sumbit").click(function() {
+		const str = document.getElementById("cc_input").value.toUpperCase();
+		let arr = str.split('');
+		let result = '';
+		for (x=0; x < str.length; x++) {
+			if (regex_cc.test(str[x])) {
+				for (y=0; y < abc.length; y++) {					
+					if (arr[x] == abc[y] && y < 13) {
+						result += (abc[y+13]);
+					} else if (arr[x] == abc[y] && y > 12) {
+						result += abc[y-13];
+					} 
+				}
+			} else {
+				result += str[x];
+			}
+		}
+		document.getElementById("cc_output").innerHTML = result;
 	});
 
 	
