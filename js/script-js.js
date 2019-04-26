@@ -36,7 +36,7 @@ $(document).ready(() => {
 	const abc = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
 	const regex_cc = /[A-Z]/ ;
 
-	$("#cc_sumbit").click(function() {
+	$("#cc_submit").click(function() {
 		const str = document.getElementById("cc_input").value.toUpperCase();
 		let arr = str.split('');
 		let result = '';
@@ -56,5 +56,14 @@ $(document).ready(() => {
 		document.getElementById("cc_output").innerHTML = result;
 	});
 
-	
+	const regex_tv = /^(1\s?)?(\(\d{3}\)|\d{3})[\s\-]?\d{3}[\s\-]?\d{4}$/;
+
+	$("#tv_submit").click(function() {
+		let str = document.getElementById("tv_input").value;
+		if (regex_tv.test(str)) {
+			document.getElementById("tv_output").innerHTML = "True";
+		} else {
+			document.getElementById("tv_output").innerHTML = "False";
+		}
+	});
 });
