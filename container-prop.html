@@ -1,268 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Flexbox Container Properties</title>
-    <link href="styles/styles-tech-doc.css" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-  </head>
-  <body>
-    <nav id="navbar">
-      <header>Flexbox</header>
-      <h3>Container Properties</h3>
-      <h3><a href="item-prop.html" id="switch-prop">Item Properties</a></h3>
-      <a href="#display" class="nav-link" >Display</a>
-      <a href="#flex-direction" class="nav-link">Flex-direction</a>
-      <a href="#flex-wrap" class="nav-link">Flex-wrap</a>
-      <a href="#flex-flow" class="nav-link">Flex-flow</a>
-      <a href="#justify-content" class="nav-link">Justify-content</a>
-      <a href="#align-content" class="nav-link">Align-content</a>
-      <a href="#align-items" class="nav-link">Align-items</a>
-    </nav>
-    <main id="main-doc">
-      <section class="main-section" id="display">
-        <header>Display</header>
-        <p>This property defines the flex container, parent. It also defines the flex item, children, to all of its direct children. This property is necessary to use flexbox.</p>
-        <code>.container {<br/>
-        display: flex; /* or inline-flex */<br/>
-        }</code>
-        <dv class="container">
-          <div class="child">
-            <p>Hello</p>
-          </div>
-          <div class="child">
-            <p>World</p>
-          </div>
-        </dv>
-        <p>The green above is the parent and has the display property of flex. Bellow is a layout is flexbox, the flex items will line up based on the main axis and cross axis.</p>
-        <img src="https://css-tricks.com/wp-content/uploads/2011/08/flexbox.png" alt="layout of flex-box"/>
-      </section>
-      <section class="main-section" id="flex-direction">
-        <header>Flex-direction</header>
-        <p>This property estamblishes the direction the flex items are placed and of the main axis.</p>
-        <code>.container {<br/>
-        flex-direction: row; /* row-reverse, column, or column-reverse */<br/>
-        }</code>
-        <dv class="container">
-          <div class="child">
-            <p>Hello</p>
-          </div>
-          <div class="child">
-            <p>Row</p>
-          </div>
-        </dv>
-        <dv class="container container-column">
-          <div class="child">
-            <p>Hello</p>
-          </div>
-          <div class="child">
-            <p>Column</p>
-          </div>
-        </dv>
-        <ul>
-          <li>Row: <em>Default</em>. Left to right.</li>
-          <li>Row-Reverse: Right to left.</li>
-          <li>Column: Top to bottom.</li>
-          <li>Column-reverse: Bottom to top.</li>
-        </ul>
-      </section>
-      <section class="main-section" id="flex-wrap">
-        <header>Flex-wrap</header>
-        <p>The default for flex is to put every flex item in one row. This can be changed with this property.</p>
-        <code>.container{<br/>
-        flex-wrap: nowrap; /* wrap or wrap-reverse */<br/>
-        }</code>
-        <dv class="container nonwrap">
-          <div class="child">
-            <p>Hello</p>
-          </div>
-          <div class="child">
-            <p>Nonwrap</p>
-          </div>
-          <div class="child">
-            <p>Nonwrap</p>
-          </div>
-          <div class="child">
-            <p>Nonwrap</p>
-          </div>
-          <div class="child">
-            <p>Nonwrap</p>
-          </div>
-          <div class="child">
-            <p>Nonwrap</p>
-          </div>
-        </dv>
-        <dv class="container wrap">
-          <div class="child">
-            <p>Hello</p>
-          </div>
-          <div class="child">
-            <p>Wrap</p>
-          </div>
-          <div class="child">
-            <p>Wrap</p>
-          </div>
-          <div class="child">
-            <p>Wrap</p>
-          </div>
-          <div class="child">
-            <p>Wrap</p>
-          </div>
-          <div class="child">
-            <p>Wrap</p>
-          </div>
-          <div class="child">
-            <p>Wrap</p>
-          </div>
-        </dv>
-        <ul>
-          <li>Nowrap: <em>Default</em>. One row for all the flex items.</li>
-          <li>Wrap: Flex items will wrap to multiple rows if needed.</li>
-          <li>Wrap-Reverse: Same as wrap, but bottom to top.</li>
-        </ul>
-      </section>
-      <section class="main-section" id="flex-flow">
-        <header>Flex-flow</header>
-        <p>This property joins flex-direction and flex-wrap into one property. It defines the main and cross axis. The two properties are seperated by a space.</p>
-        <code>.container{<br/>
-        flex-flow: /* flex-direction  flex-wrap */<br/>
-        }</code>
-      </section>
-      <section class="main-section" id="justify-content">
-        <header>Justify-content</header>
-        <p>This property sets the alignment along the main axis. It helps distribute space when items do not fill the maximum size of the row.</p>
-        <code>.container {<br/>
-        justify-content: /* flex-start, flex-end, center, space-between, space-around, and space-evenly */<br/>
-        }</code>
-        <dv class="container center">
-          <div class="child">
-            <p>Hello</p>
-          </div>
-          <div class="child">
-            <p>Center</p>
-          </div>
-          <div class="child">
-            <p>Me</p>
-          </div>
-        </dv>
-        <dv class="container space-between">
-          <div class="child">
-            <p>Hello</p>
-          </div>
-          <div class="child">
-            <p>Space</p>
-          </div>
-          <div class="child">
-            <p>Between</p>
-          </div>
-        </dv>
-        <ul>
-          <li>Flex-start: <em>Default</em>. Items are placed near the main start.</li>
-          <li>Flex-end: Items are placed near the main end.</li>
-          <li>Center: Evenly centers the items between the main start and end.</li>
-          <li>Space-between: Items are evenly distributed accross the main axis. The first item is on the main start, last item on the main end.</li>
-          <li>Space-around: Space is disributed around all the items, the main start, and main end.</li>
-          <li>Space-evenly: Space between any items, main start, and main end are evenly distributed.</li>
-        </ul>
-      </section>
-      <section class="main-section" id="align-content">
-        <header>Align-content</header>
-        <p>This property aligns rows of items between the cross start and cross end. Like what justify-content does to items on the main axis, this does to rows on the cross axis. Multiple rows of items.</p>
-        <code>.container {<br/>
-        align-content: /* flex-start, flex-end, center, space-between, space-around, or stretch */<br/>
-        }</code>
-        <dv class="container wrap space-around">
-          <div class="child">
-            <p>Hello</p>
-          </div>
-          <div class="child">
-            <p>Space</p>
-          </div>
-          <div class="child">
-            <p>Around</p>
-          </div>
-          <div class="child">
-            <p>Around</p>
-          </div>
-          <div class="child">
-            <p>Around</p>
-          </div>
-          <div class="child">
-            <p>Around</p>
-          </div>
-          <div class="child">
-            <p>Around</p>
-          </div>
-        </dv>
-        <dv class="container wrap flex-end">
-          <div class="child">
-            <p>Hello</p>
-          </div>
-          <div class="child">
-            <p>Flex-end</p>
-          </div>
-          <div class="child">
-            <p>Flex-end</p>
-          </div>
-          <div class="child">
-            <p>Flex-end</p>
-          </div>
-          <div class="child">
-            <p>Flex-end</p>
-          </div>
-          <div class="child">
-            <p>Flex-end</p>
-          </div>
-          <div class="child">
-            <p>Flex-end</p>
-          </div>
-        </dv>
-        <ul>
-          <li>Flex-start: Rows are placed near the cross start.</li>
-          <li>Flex-end: Rows are placed near the cross end.</li>
-          <li>Center: Evenly centers the rows between the cross start and end.</li>
-          <li>Space-between: Rows are evenly distributed accross the cross axis. The first item is on the cross start, last item on the cross end.</li>
-          <li>Space-around: Space is disributed around all the rows, the cross start, and cross end.</li>
-          <li>Stretch: <em>Default</em>. Space between any rows, cross start, and cross end are evenly distributed. </li>
-        </ul>
-      </section>
-      <section class="main-section" id="align-items">
-        <header>Align-items</header>
-        <p>This property defines how items are layed out along the cross axis. Similar to align-content but just one row of items.</p>
-        <code>.container {<br/>
-        align-items: /* flex-start, flex-end, center, baseline, or stretch */<br/>
-        }</code>
-        <dv class="container flex-start">
-          <div class="child">
-            <p>Hello</p>
-          </div>
-          <div class="child">
-            <p>Flex</p>
-          </div>
-          <div class="child">
-            <p>Start</p>
-          </div>
-        </dv>
-        <dv class="container flex-end-align-items">
-          <div class="child">
-            <p>Hello</p>
-          </div>
-          <div class="child">
-            <p>Flex</p>
-          </div>
-          <div class="child">
-            <p>End</p>
-          </div>
-        </dv>
-        <ul>
-          <li>Flex-start: Items are placed near the cross start.</li>
-          <li>Flex-end: Items are placed near the cross end.</li>
-          <li>Center: Evenly centers the items between the cross start and end.</li>
-          <li>Baseline: This property aligns the items based off all of the baselines of their first elements.</li>
-          <li>Stretch: <em>Default</em>. Stretches each item from the cross start to the cross end, filling the container.</li>
-        </ul>
-      </section>
-    </main>
-  </body>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Flexbox Container Properties</title>
+		<link href="styles/styles-tech-doc.css" rel="stylesheet" type="text/css" />
+		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" />
+	</head>
+	<body>
+		<nav id="navbar">
+			<header>Flexbox</header>
+			<h3>Container Properties</h3>
+			<h3><a href="item-prop.html" id="switch-prop">Item Properties</a></h3>
+			<a href="#display" class="nav-link">Display</a>
+			<a href="#flex-direction" class="nav-link">Flex-direction</a>
+			<a href="#flex-wrap" class="nav-link">Flex-wrap</a>
+			<a href="#flex-flow" class="nav-link">Flex-flow</a>
+			<a href="#justify-content" class="nav-link">Justify-content</a>
+			<a href="#align-content" class="nav-link">Align-content</a>
+			<a href="#align-items" class="nav-link">Align-items</a>
+		</nav>
+		<main id="main-doc">
+			<section class="main-section" id="display">
+				<header>Display</header>
+				<p>
+					This property defines the flex container, parent. It also defines the flex item, children, to all of its direct
+					children. This property is necessary to use flexbox.
+				</p>
+				<code
+					>.container {<br />
+					display: flex; /* or inline-flex */<br />
+					}</code
+				>
+				<dv class="container">
+					<div class="child">
+						<p>Hello</p>
+					</div>
+					<div class="child">
+						<p>World</p>
+					</div>
+				</dv>
+				<p>
+					The green above is the parent and has the display property of flex. Bellow is a layout is flexbox, the flex items will
+					line up based on the main axis and cross axis.
+				</p>
+				<img src="https://css-tricks.com/wp-content/uploads/2011/08/flexbox.png" alt="layout of flex-box" />
+			</section>
+			<section class="main-section" id="flex-direction">
+				<header>Flex-direction</header>
+				<p>This property estamblishes the direction the flex items are placed and of the main axis.</p>
+				<code
+					>.container {<br />
+					flex-direction: row; /* row-reverse, column, or column-reverse */<br />
+					}</code
+				>
+				<dv class="container">
+					<div class="child">
+						<p>Hello</p>
+					</div>
+					<div class="child">
+						<p>Row</p>
+					</div>
+				</dv>
+				<dv class="container container-column">
+					<div class="child">
+						<p>Hello</p>
+					</div>
+					<div class="child">
+						<p>Column</p>
+					</div>
+				</dv>
+				<ul>
+					<li>Row: <em>Default</em>. Left to right.</li>
+					<li>Row-Reverse: Right to left.</li>
+					<li>Column: Top to bottom.</li>
+					<li>Column-reverse: Bottom to top.</li>
+				</ul>
+			</section>
+			<section class="main-section" id="flex-wrap">
+				<header>Flex-wrap</header>
+				<p>The default for flex is to put every flex item in one row. This can be changed with this property.</p>
+				<code
+					>.container{<br />
+					flex-wrap: nowrap; /* wrap or wrap-reverse */<br />
+					}</code
+				>
+				<dv class="container nonwrap">
+					<div class="child">
+						<p>Hello</p>
+					</div>
+					<div class="child">
+						<p>Nonwrap</p>
+					</div>
+					<div class="child">
+						<p>Nonwrap</p>
+					</div>
+					<div class="child">
+						<p>Nonwrap</p>
+					</div>
+					<div class="child">
+						<p>Nonwrap</p>
+					</div>
+					<div class="child">
+						<p>Nonwrap</p>
+					</div>
+				</dv>
+				<dv class="container wrap">
+					<div class="child">
+						<p>Hello</p>
+					</div>
+					<div class="child">
+						<p>Wrap</p>
+					</div>
+					<div class="child">
+						<p>Wrap</p>
+					</div>
+					<div class="child">
+						<p>Wrap</p>
+					</div>
+					<div class="child">
+						<p>Wrap</p>
+					</div>
+					<div class="child">
+						<p>Wrap</p>
+					</div>
+					<div class="child">
+						<p>Wrap</p>
+					</div>
+				</dv>
+				<ul>
+					<li>Nowrap: <em>Default</em>. One row for all the flex items.</li>
+					<li>Wrap: Flex items will wrap to multiple rows if needed.</li>
+					<li>Wrap-Reverse: Same as wrap, but bottom to top.</li>
+				</ul>
+			</section>
+			<section class="main-section" id="flex-flow">
+				<header>Flex-flow</header>
+				<p>
+					This property joins flex-direction and flex-wrap into one property. It defines the main and cross axis. The two
+					properties are seperated by a space.
+				</p>
+				<code
+					>.container{<br />
+					flex-flow: /* flex-direction flex-wrap */<br />
+					}</code
+				>
+			</section>
+			<section class="main-section" id="justify-content">
+				<header>Justify-content</header>
+				<p>
+					This property sets the alignment along the main axis. It helps distribute space when items do not fill the maximum size
+					of the row.
+				</p>
+				<code
+					>.container {<br />
+					justify-content: /* flex-start, flex-end, center, space-between, space-around, and space-evenly */<br />
+					}</code
+				>
+				<dv class="container center">
+					<div class="child">
+						<p>Hello</p>
+					</div>
+					<div class="child">
+						<p>Center</p>
+					</div>
+					<div class="child">
+						<p>Me</p>
+					</div>
+				</dv>
+				<dv class="container space-between">
+					<div class="child">
+						<p>Hello</p>
+					</div>
+					<div class="child">
+						<p>Space</p>
+					</div>
+					<div class="child">
+						<p>Between</p>
+					</div>
+				</dv>
+				<ul>
+					<li>Flex-start: <em>Default</em>. Items are placed near the main start.</li>
+					<li>Flex-end: Items are placed near the main end.</li>
+					<li>Center: Evenly centers the items between the main start and end.</li>
+					<li>
+						Space-between: Items are evenly distributed accross the main axis. The first item is on the main start, last item on
+						the main end.
+					</li>
+					<li>Space-around: Space is disributed around all the items, the main start, and main end.</li>
+					<li>Space-evenly: Space between any items, main start, and main end are evenly distributed.</li>
+				</ul>
+			</section>
+			<section class="main-section" id="align-content">
+				<header>Align-content</header>
+				<p>
+					This property aligns rows of items between the cross start and cross end. Like what justify-content does to items on the
+					main axis, this does to rows on the cross axis. Multiple rows of items.
+				</p>
+				<code
+					>.container {<br />
+					align-content: /* flex-start, flex-end, center, space-between, space-around, or stretch */<br />
+					}</code
+				>
+				<dv class="container wrap space-around">
+					<div class="child">
+						<p>Hello</p>
+					</div>
+					<div class="child">
+						<p>Space</p>
+					</div>
+					<div class="child">
+						<p>Around</p>
+					</div>
+					<div class="child">
+						<p>Around</p>
+					</div>
+					<div class="child">
+						<p>Around</p>
+					</div>
+					<div class="child">
+						<p>Around</p>
+					</div>
+					<div class="child">
+						<p>Around</p>
+					</div>
+				</dv>
+				<dv class="container wrap flex-end">
+					<div class="child">
+						<p>Hello</p>
+					</div>
+					<div class="child">
+						<p>Flex-end</p>
+					</div>
+					<div class="child">
+						<p>Flex-end</p>
+					</div>
+					<div class="child">
+						<p>Flex-end</p>
+					</div>
+					<div class="child">
+						<p>Flex-end</p>
+					</div>
+					<div class="child">
+						<p>Flex-end</p>
+					</div>
+					<div class="child">
+						<p>Flex-end</p>
+					</div>
+				</dv>
+				<ul>
+					<li>Flex-start: Rows are placed near the cross start.</li>
+					<li>Flex-end: Rows are placed near the cross end.</li>
+					<li>Center: Evenly centers the rows between the cross start and end.</li>
+					<li>
+						Space-between: Rows are evenly distributed accross the cross axis. The first item is on the cross start, last item
+						on the cross end.
+					</li>
+					<li>Space-around: Space is disributed around all the rows, the cross start, and cross end.</li>
+					<li>Stretch: <em>Default</em>. Space between any rows, cross start, and cross end are evenly distributed.</li>
+				</ul>
+			</section>
+			<section class="main-section" id="align-items">
+				<header>Align-items</header>
+				<p>
+					This property defines how items are layed out along the cross axis. Similar to align-content but just one row of items.
+				</p>
+				<code
+					>.container {<br />
+					align-items: /* flex-start, flex-end, center, baseline, or stretch */<br />
+					}</code
+				>
+				<dv class="container flex-start">
+					<div class="child">
+						<p>Hello</p>
+					</div>
+					<div class="child">
+						<p>Flex</p>
+					</div>
+					<div class="child">
+						<p>Start</p>
+					</div>
+				</dv>
+				<dv class="container flex-end-align-items">
+					<div class="child">
+						<p>Hello</p>
+					</div>
+					<div class="child">
+						<p>Flex</p>
+					</div>
+					<div class="child">
+						<p>End</p>
+					</div>
+				</dv>
+				<ul>
+					<li>Flex-start: Items are placed near the cross start.</li>
+					<li>Flex-end: Items are placed near the cross end.</li>
+					<li>Center: Evenly centers the items between the cross start and end.</li>
+					<li>Baseline: This property aligns the items based off all of the baselines of their first elements.</li>
+					<li>Stretch: <em>Default</em>. Stretches each item from the cross start to the cross end, filling the container.</li>
+				</ul>
+			</section>
+		</main>
+	</body>
 </html>

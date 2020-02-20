@@ -1,60 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
-	<title>FFF Survey Form</title>
- 	<link href="styles/styles-survey-form.css" rel="stylesheet" type="text/css" />
-</head>
-<body>
-	<h1 id="title">Survey Form</h1>
-	<p id="description">The is a form I created for a Free Code Camp project.</p>
-	<form id="survey-form">
-    <div id="entries">
-      <label for="name" id="name-label">Name: </label>
-      <input type="text" name="name" id="name" placeholder="Enter your Name" required>
-      <label for="name" id="email-label">Email: </label>
-      <input type="email" name="email" id="email" placeholder="Enter your Email" required>
-      <label for="number" id="number-label">Age: </label>
-      <input type="number" name="number" id="number" min="0" max="125" placeholder="Enter your Age">
-    </div>
-    <div id="code-level">
-      <label for="codeLevel">What is your code level?</label>
-      <select id="dropdown" name="codeLevel" class="dropdown">
-        <option disabled selected value>Level</option>
-        <option value="never">Never done it</option>
-        <option value="beginner">Beginner</option>
-        <option value="intermediate">Intermediate</option>
-        <option value="master">Master</option>
-      </select>
-    </div>
-		<div id="gen-pick">
-			<p>Gender</p>
-			<input type="radio" name="gender" value="male"> 
-			<label for="male">Male</label>
-			<input type="radio" name="gender" value="female">
-			<label for="female">Female</label>
-			<input type="radio" name="gender" value="other">
-			<label for="Other">Other</label>
-		</div>
-		<div id="lang-pick">
-			<p>What languages do you know?</p>
-			<input type="checkbox" name="html" value="html">
-			<label for="html">HTML</label>
-			<input type="checkbox" name="css" value="css">
-			<label for="css">CSS</label>
-			<input type="checkbox" name="javascript" value="javascript">
-			<label>JavaScript</label>
-			<input type="checkbox" name="php" value="php">
-			<label for="php">PHP</label>
-			<input type="checkbox" name="python" value="python">
-			<label for="python">Phython</label>
-		</div>
-    <div id="comment">
-      <label for="comments">Any Comments</label>
-      <textarea id="comments" ></textarea>
-    </div>
-		<button id="submit" type="submit">Submit</button>
-	</form>
-</body>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>FFF Survey Form</title>
+		<link href="styles/styles-survey-form.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<h1 id="title">Survey Form</h1>
+		<p id="description">The is a form I created for a Free Code Camp project.</p>
+		<form id="survey-form">
+			<div id="entries">
+				<label for="name" id="name-label">Name: </label>
+				<input type="text" name="name" id="name" placeholder="Enter your Name" required />
+				<label for="name" id="email-label">Email: </label>
+				<input type="email" name="email" id="email" placeholder="Enter your Email" required />
+				<label for="number" id="number-label">Age: </label>
+				<input type="number" name="number" id="number" min="0" max="125" placeholder="Enter your Age" />
+			</div>
+			<div id="code-level">
+				<label for="codeLevel">What is your code level?</label>
+				<select id="dropdown" name="codeLevel" class="dropdown">
+					<option disabled selected value>Level</option>
+					<option value="never">Never done it</option>
+					<option value="beginner">Beginner</option>
+					<option value="intermediate">Intermediate</option>
+					<option value="master">Master</option>
+				</select>
+			</div>
+			<div id="gen-pick">
+				<p>Gender</p>
+				<input type="radio" name="gender" value="male" />
+				<label for="male">Male</label>
+				<input type="radio" name="gender" value="female" />
+				<label for="female">Female</label>
+				<input type="radio" name="gender" value="other" />
+				<label for="Other">Other</label>
+			</div>
+			<div id="lang-pick">
+				<p>What languages do you know?</p>
+				<input type="checkbox" name="html" value="html" />
+				<label for="html">HTML</label>
+				<input type="checkbox" name="css" value="css" />
+				<label for="css">CSS</label>
+				<input type="checkbox" name="javascript" value="javascript" />
+				<label>JavaScript</label>
+				<input type="checkbox" name="php" value="php" />
+				<label for="php">PHP</label>
+				<input type="checkbox" name="python" value="python" />
+				<label for="python">Phython</label>
+			</div>
+			<div id="comment">
+				<label for="comments">Any Comments</label>
+				<textarea id="comments"></textarea>
+			</div>
+			<button id="submit" type="submit">Submit</button>
+		</form>
+	</body>
 </html>
